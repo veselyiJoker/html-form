@@ -1,0 +1,376 @@
+.calculation-form {
+    display: flex;
+}
+
+.calculation-form__column {
+    margin-right: 20px;
+}
+
+.calculation-form__select-label {
+    display: block;
+    font-size: 18px;
+    color: #4e4d4d;
+    margin-bottom: 5px;
+}
+
+.calculation-form__select {
+    width: 366px;
+    height: 40px;
+    padding: 0 15px;
+    margin-bottom: 25px;
+    font-size: 17px;
+    color: #9a9b9d;
+    font-family: $ubuntu-ff;
+    border: 1px solid #898888;
+    appearance: none;
+    background: #fff url("../img/angle-arrow-down.png") no-repeat calc(100% - 10px);
+    cursor: pointer;
+    outline: none;
+    &:focus {
+        box-shadow: 0px 0px 0px 2px #f29700;
+    }
+    option {
+        height: 100px;
+        padding: 20px;
+    }
+}
+
+.calculation-form__material-fieldset {
+    font-size: 14px;
+    border: none;
+}
+
+.calculation-form__material-legend {
+    width: 370px;
+    font-size: 18px;
+}
+
+.calculation-form__material-list {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 90px;
+        min-width: 90px;
+        label {
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}
+
+.calculation-form__material-radio {
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(50% - 35px);
+        width: 70px;
+        height: 70px;
+        background-size: 62px 62px;
+        background-repeat: no-repeat;
+        background-position:center;
+        border-radius: 50%;
+    }
+    &:checked {
+        &+label {
+            color: #4171B5;
+        }
+        &::before {
+            border: 1px solid green;
+        }
+    }
+    &:focus {
+        &::before {
+            border: 2px solid #F29700;
+        }
+    }
+}
+
+.calculation-form__material-pine {
+    &::before {
+        background-image: url('../img/pine.png');
+    }
+}
+
+.calculation-form__material-larch {
+    &::before {
+        background-image: url('../img/larch.png');
+    }
+}
+
+.calculation-form__material-oak {
+    &::before {
+        background-image: url('../img/oak.png');
+    }
+}
+
+.calculation-form__material-meratin {
+    &::before {
+        background-image: url('../img/meratin.png');
+    }
+}
+
+.calculation-form__additional-elements-fildset {
+    width: 370px;
+    border: none;
+}
+
+.calculation-form__additional-elements-legend {
+    font-family: $ubuntu-ff;
+    font-size: 18px;
+    color: #f29700;
+}
+
+.calculation-form__additional-elements-list {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 35px;
+        margin-right: 25px;
+    }
+    label {
+        cursor: pointer;
+        padding-left: 5px;
+    }
+}
+
+.calculation-form__additional-elements-checkbox {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #a8a8a8;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+    &:checked {
+        &::after {
+            background-image: url(../img/tick.png);
+        }
+    }
+    &:focus {
+        &::after {
+            box-shadow: 0px 0px 0px 2px #f29700;
+        }
+    }
+}
+
+.calculation-form__additional-elements-checkbox-info {
+    position: absolute;
+    top: 0;
+    right: -16;
+    line-height: 16px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    background: #b5b2b2;
+}
+
+
+.calculation-form__submit-btn {
+    padding:24px 76px 22px;
+    margin-bottom: 40px;
+    background: #64892E;
+    border: none;
+    color: #fff;
+    font-family: $ubuntu-ff;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    outline: none;
+    &:focus {
+        background: #F29700;
+    }
+    &:hover {
+        background: #F29700;
+    }
+}
+
+.calculation-form__construct-type-fieldset {
+    border: none;
+}
+
+.calculation-form__construct-type-list {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+}
+
+.calculation-form__construct-type-radio {
+    box-sizing: content-box;
+    position: relative;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #fafafa;
+    &:checked {
+        &::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 23px;
+            height: 23px;
+            border: 1px solid #F29700;
+            border-radius: 50%;
+            background:#fff url("../img/tick.png") no-repeat center;
+        }
+    }
+    &:focus {
+        box-shadow: 0px 0px 0px 2px #f29700;
+    }
+}
+
+.calculation-form__construct-type-single-window {
+    width: 24px;
+    height: 32px;
+    background-image: url(../img/win-icon-1.png);
+}
+
+.calculation-form__construct-type-double-window {
+    width: 45px;
+    height: 32px;
+    background-image: url(../img/win-icon-2.png);
+}
+
+.calculation-form__construct-type-triple-window {
+    width: 53px;
+    height: 32px;
+    background-image: url(../img/win-icon-3.png);
+}
+
+.calculation-form__construct-type-arched-window {
+    width: 26px;
+    height: 34px;
+    background-image: url(../img/win-icon-4.png);
+}
+
+.calculation-form__window-fieldset {
+    border: none;
+    margin-bottom: 30px;
+}
+
+.calculation-form__window {
+    position: relative;
+    width: 136px;
+    height: 136px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    color: #4e4d4d;
+    background: url(../img/window.png) no-repeat center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: -8px;
+        height: 132px;
+        width: 1px;
+        background: #000;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 2px;
+        bottom: -8px;
+        width: 132px;
+        height: 1px;
+        background: #000;
+    }
+}
+
+.calculation-form__window-height {
+    position: absolute;
+    left: -65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+        width: 48px;
+        height: 29px;
+        border: 1px solid #a3a2a2;
+        outline: none;
+        &:focus {
+            box-shadow: 0px 0px 0px 2px #f29700;
+        }
+    }
+}
+
+.calculation-form__window-width {
+    position: absolute;
+    bottom: -41px;
+    display: flex;
+    align-items: center;
+    input {
+        width: 48px;
+        height: 29px;
+        border: 1px solid #a3a2a2;
+        outline: none;
+        &:focus {
+            box-shadow: 0px 0px 0px 2px #f29700;
+        }
+    }
+}
+
+.calculation-form__price-wrapper {
+    box-sizing: border-box;
+    width: 270px;
+    margin-left: 15px;
+    padding: 20px 25px;
+    background: #F1F0F0;
+    font-size: 14px;
+    color: #7C7C7B;
+    a {
+        display: block;
+        color: #7C7C7B;
+        text-decoration: underline;
+        outline: none;
+        &:focus {
+            color: #f29700;
+        }
+    }
+}
+
+.calculation-form__price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0C0E10;
+    text-transform: uppercase;
+    margin: 0;
+    span {
+        font-size: 40px;
+        font-weight: 700;
+    }
+}

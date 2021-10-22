@@ -1,0 +1,12 @@
+.calculation {
+    font-family: $ubuntu-ff;
+    height: 100%;
+}
+
+.calculation__container {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: auto;
+    background: #fafafa;
+}
